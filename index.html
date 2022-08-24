@@ -15,10 +15,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md sticky-top border-bottom border-dark border-3 shadow"
-    style="background-color: white">
+  <nav class="navbar navbar-expand-md sticky-top border-bottom border-dark border-3 shadow bg-light" id="nav">
     <div class="container">
-      <a class="navbar-brand text-dark fs-4" href="#" id="myfolio">BayuDirga</a>
+      <a class="navbar-brand fs-4 text-dark" href="#" id="myfolio">BayuDirga</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,13 +25,13 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav" id="list-example">
           <li class="nav-item mx-2">
-            <a class="nav-link text-dark" href="#about">About</a>
+            <a class="nav-link text-dark" href="#about" id="text-dark">About</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-dark" href="#project">Project</a>
+            <a class="nav-link text-dark" href="#project" id="text-dark">Project</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-dark" href="#contact">Contact</a>
+            <a class="nav-link text-dark" href="#contact" id="text-dark">Contact</a>
           </li>
         </ul>
       </div>
@@ -42,29 +41,23 @@
   <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <section class="header text-center">
       <div class="container" id="container-header">
+        <div class="row my-3">
+          <div class="col-12 col-sm-12 d-flex justify-content-end">
+            <button class="btn btn-dark" id="btn-switch" onclick="myFunction()">Dark Mode</button>
+          </div>
+        </div>
         <div class="row">
           <div class="col-12 col-sm-12 col-md-6 col-lg-5">
-            <img src="img/foto.jpg" alt="" width="300px"
-              class="shadow img-profile rounded border border-dark border-3" />
+            <img src="img/foto.jpg" alt="" width="300px" class="shadow img-profile rounded border border-dark border-3"
+              id="profile" />
           </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-7">
-            <h3 class="my-4 text-dark">BAYU DIRGA PRATAMA</h3>
-            <h4 class="my-3 text-dark my-4">22 Tahun (Agustus 2000)</h4>
-            <h4 class="my-3 text-dark my-4">Bayuudirga@gmail.com</h4>
-            <h4 class="my-3 text-dark my-4">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-7 my-3">
+            <h3 class="my-4">BAYU DIRGA PRATAMA</h3>
+            <h4 class="my-3 my-4">22 Tahun (Agustus 2000)</h4>
+            <h4 class="my-3 my-4">Bayuudirga@gmail.com</h4>
+            <h4 class="my-3 my-4">
               Cisaranten Wetan, Cinambo, Bandung
             </h4>
-            <figure class="text-center">
-              <blockquote class="blockquote">
-                <p>
-                  "Yakinlah ada sesuatu yang menantimu selepas banyaknya
-                  kesabaran yang engkau jalani"
-                </p>
-              </blockquote>
-              <figcaption class="blockquote-footer">
-                Ali Bin Abi Thalib
-              </figcaption>
-            </figure>
           </div>
         </div>
       </div>
@@ -201,72 +194,78 @@
 
     <section id="project" class="mt-5">
       <div class="container text-center" id="main-project">
-        <h1 class="text-center text-dark">PROJECT</h1>
+        <h1 class="text-center">PROJECT</h1>
         <div class="row mt-5 d-flex justify-content-center">
-          <div class="col-12 col-sm-6 col-md-4 text-dark my-3">
-            <div class="card border border-dark border-2">
+          <div class="col-12 col-sm-6 col-md-4  my-3">
+            <div class="card border border-dark border-2" id="border-card">
               <img src="img/marlyn/marlyn-card.jpg" class="card-img-top" alt="marlyn" />
               <div class="card-body">
                 <h5 class="card-title">
                   Sistem Pengelolaan Ikan Hias
                 </h5>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalMarlyn">
+                <button type="button" id="button-card" class="btn btn-dark" data-bs-toggle="modal"
+                  data-bs-target="#modalMarlyn">
                   Lihat Detail
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-md-4 text-dark my-3">
-            <div class="card border border-dark border-2">
+          <div class="col-12 col-sm-6 col-md-4  my-3">
+            <div class="card border border-dark border-2" id="border-card">
               <img src="img/fajar/190325-rental-cars-cs-229p.jpg" class="card-img-top" alt="fajar-travel" />
               <div class="card-body">
                 <h5 class="card-title">Landing Page Fajar Travel</h5>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#fajarModal">
+                <button type="button" id="button-card" class="btn btn-dark" data-bs-toggle="modal"
+                  data-bs-target="#fajarModal">
                   Lihat Detail
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 text-dark my-3">
-            <div class="card border border-dark border-2">
+          <div class="col-12 col-sm-6 col-md-4  my-3">
+            <div class="card border border-dark border-2" id="border-card">
               <img src="img/bios/019-1200x800-c-center.jpg" class="card-img-top" alt="bios-studio" />
               <div class="card-body">
                 <h5 class="card-title">Aplikasi Manajemen Projek</h5>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#biosModal">
+                <button type="button" id="button-card" class="btn btn-dark" data-bs-toggle="modal"
+                  data-bs-target="#biosModal">
                   Lihat Detail
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 text-dark my-3">
-            <div class="card border border-dark border-2">
+          <div class="col-12 col-sm-6 col-md-4  my-3">
+            <div class="card border border-dark border-2" id="border-card">
               <img src="img/folio/folio.JPG" class="card-img-top" alt="bios-studio" />
               <div class="card-body">
                 <h5 class="card-title">Website Portfolio</h5>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#folioModal">
+                <button type="button" id="button-card" class="btn btn-dark" data-bs-toggle="modal"
+                  data-bs-target="#folioModal">
                   Lihat Detail
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 text-dark my-3">
-            <div class="card border border-dark border-2">
+          <div class="col-12 col-sm-6 col-md-4  my-3">
+            <div class="card border border-dark border-2" id="border-card">
               <img src="img/rent/640x350-990x541.png" class="card-img-top" alt="bios-studio" />
               <div class="card-body">
                 <h5 class="card-title">Aplikasi Penyewaan Mobil</h5>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#rentModal">
+                <button type="button" id="button-card" class="btn btn-dark" data-bs-toggle="modal"
+                  data-bs-target="#rentModal">
                   Lihat Detail
                 </button>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 text-dark my-3">
-            <div class="card border border-dark border-2">
+          <div class="col-12 col-sm-6 col-md-4  my-3">
+            <div class="card border border-dark border-2" id="border-card">
               <img src="img/desain/graphic-design-tools.jpg" class="card-img-top" alt="bios-studio" />
               <div class="card-body">
                 <h5 class="card-title">Desain Vektor Photoshop</h5>
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#desainModal">
+                <button type="button" id="button-card" class="btn btn-dark" data-bs-toggle="modal"
+                  data-bs-target="#desainModal">
                   Lihat Detail
                 </button>
               </div>
@@ -278,50 +277,48 @@
 
     <section id="contact" class="mt-5">
       <div class="container text-center" id="main-contact">
-        <h1 class="text-center text-dark">Contact</h1>
+        <h1 class="text-center ">Contact</h1>
         <div class="row my-5" id="kotak-contact">
           <div class="col-6 col-sm-6 col-md-3">
-            <a href="https://github.com/smoshi0" class="text-decoration-none text-dark" target="_blank">
+            <a href="https://github.com/smoshi0" class="text-decoration-none " target="_blank">
               <div class="border my-2" id="kontak">
                 <h3 class="text-center mt-3">Github</h3>
                 <img src="img/icon/github.png" alt="" width="50px">
                 <div class="my-3">
-                  <small>github/smoshi0</small>
+                  <small>smoshi0</small>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-3">
-            <a href="https://web.facebook.com/bayu.cisaranten.14" class="text-decoration-none text-dark"
-              target="_blank">
+            <a href="https://web.facebook.com/bayu.cisaranten.14" class="text-decoration-none " target="_blank">
               <div class="border my-2" id="kontak">
                 <h3 class="text-center mt-3">Facebook</h3>
                 <img src="img/icon/fb.png" alt="" width="50px">
                 <div class="my-3">
-                  <small>facebook/Bayu</small>
+                  <small>Bayu</small>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-3">
-            <a href="https://www.instagram.com/bayudirga00/" class="text-decoration-none text-dark" target="_blank">
+            <a href="https://www.instagram.com/bayudirga00/" class="text-decoration-none " target="_blank">
               <div class="border my-2" id="kontak">
                 <h3 class="text-center mt-3">Instagram</h3>
                 <img src="img/icon/ig.png" alt="" width="50px">
                 <div class="my-3">
-                  <small>instagram/Bayudirga00</small>
+                  <small>@bayudirga00</small>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-6 col-sm-6 col-md-3">
-            <a href="https://wa.me/+6282144717457/?text=Halo Bayu!" class="text-decoration-none text-dark"
-              target="_blank">
+            <a href="https://wa.me/+6282144717457/?text=Halo Bayu!" class="text-decoration-none " target="_blank">
               <div class="border my-2" id="kontak">
                 <h3 class="text-center mt-3">Whatsapp</h3>
                 <img src="img/icon/wa.png" alt="" width="50px">
                 <div class="my-3">
-                  <small>whatsapp/082144717457</small>
+                  <small>082144717457</small>
                 </div>
               </div>
             </a>
